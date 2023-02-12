@@ -1,0 +1,10 @@
+<image src="https://gitee.com/Niu_efei/picturep/raw/master/202302081948068.png" mode="scaleToFill" class="bg-img" style="height: {{clientHeight+'px'}};"/>
+
+
+<van-button round type="info" 
+class="btn" 
+custom-style="width:80px" 
+class="btn" 
+style="top: {{clientHeight*0.8+'px'}};"
+bindtap="goWrite"
+>GO</van-button>

@@ -1,0 +1,12 @@
+page {
+  /* overflow: hidden; */
+}
+.bg-img {
+  position: absolute;
+  width: 750rpx;
+}
+.btn {
+  position: relative;
+  left: 50%;
+  margin-left: -40px;
+}

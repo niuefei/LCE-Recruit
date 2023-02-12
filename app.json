@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/signup/signup",
+    "pages/user/user",
+    "pages/signup-write/signup-write"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black",
+    "navigationBarBackgroundColor": "#EDEDED"
+  },
+  
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-field": "@vant/weapp/field/index"
+    
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/static/images/index.png",
+      "selectedIconPath": "/static/images/index-active.png"
+    },
+    {
+      "pagePath": "pages/signup/signup",
+      "text": "报名",
+      "iconPath": "/static/images/signup.png",
+      "selectedIconPath": "/static/images/signup-active.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "/static/images/user.png",
+      "selectedIconPath": "/static/images/user-active.png"
+    }
+  ]
+  }
+}

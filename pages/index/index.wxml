@@ -1,0 +1,17 @@
+<swiper class="swiper" style="height: {{clientHeight+'px'}}" vertical="true" 	duration="200">
+  <swiper-item>
+    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302081947452.png" mode="scaleToFill"/>
+  </swiper-item>
+  <swiper-item>
+    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302081953398.png" mode="scaleToFill"/>
+  </swiper-item>
+  <swiper-item>
+    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302081947181.png" mode="scaleToFill"/>
+  </swiper-item>
+  <swiper-item>
+    
+  </swiper-item>
+  <swiper-item>
+    
+  </swiper-item>
+</swiper>
