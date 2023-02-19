@@ -1,6 +1,6 @@
 <!--pages/user/user.wxml-->
 <text>pages/user/user.wxml</text>
 
-<view>
-  
+<view class="animate__animated animate__bounce">
+  测试动画效果
 </view>
