@@ -13,16 +13,23 @@ Page({
   onReady() {
     this.storeBindings = createStoreBindings(this , {
       store,
-      actions: ['getUserInfo_mobx']
+      fields: ['owner_id'],
+      actions: ['getUserInfo_mobx','getOwner_id']
     })
   },
   onLoad() {
-    
+    var that = this;
     wx.login({
       success (res) {
         if (res.code) {
           //发起网络请求
           console.log('code='+res.code)
+          // 将code保存到data中
+          that.setData({
+            owner_id: res.code
+          })
+          // 保存在store中
+          that.getOwner_id(res.code);
           wx.request({
             url: 'http://www.kevin.tj.cn:8082/recruit/login/wechatLogin?code='+res.code,
             data: {
@@ -51,7 +58,6 @@ Page({
   })
   },// onload
 
-
   a() {
     console.log('触发a');
       this.getUserInfo_mobx(this.data.userInfo);
@@ -66,8 +72,10 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        this.a();
       }
     })
+    
     
   },
   getUserInfo(e) {

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "left-info": "../../components/user/LeftInfo"
+  },
   "navigationBarTitleText": "我的"
 }

@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    default_avatar: "../../static/images/default-avatar.svg"
   },
 
   /**
@@ -15,7 +16,7 @@ Page({
   onLoad() {
     this.storeBindings = createStoreBindings(this , {
       store,
-      fields: ['userInfo'],
+      fields: ['userInfo','signupData'],
     })
     
   },

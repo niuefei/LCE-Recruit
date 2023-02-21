@@ -1,6 +1,10 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
-
-<view class="animate__animated animate__bounce">
-  测试动画效果
+<image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302192324322.png" mode="" />
+<view class="bg-square"></view>
+<view class="info-wrapper">
+  <left-info />
+  <image class="avatar" src="{{userInfo.avatarUrl?userInfo.avatarUrl:default_avatar}}" mode="" />
+  
 </view>
+<view class="progress">
+    
+  </view>

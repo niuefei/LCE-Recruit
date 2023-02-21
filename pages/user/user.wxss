@@ -1,0 +1,71 @@
+.bg-img {
+  position: absolute;
+  width: 750rpx;
+  height: 280rpx;
+}
+
+.bg-square {
+  position: absolute;
+  top: 155rpx;
+  right: 40rpx;
+  width: 670rpx;
+  height: 320rpx;
+  background: #75D1CE;
+  transform: translateX(16rpx);
+}
+
+.info-wrapper {
+  position: relative;
+  top: 135rpx;
+  left: 40rpx;
+  width: 670rpx;
+  height: 320rpx;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.avatar {
+  position: absolute;
+  top: 40rpx;
+  right: 80rpx;
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #666666;
+  border-radius: 50%;
+}
+
+.name {
+  position: absolute;
+  top: 40rpx;
+  left: 64rpx;
+  font-size: 14px;
+
+}
+
+.line {
+  position: absolute;
+  top: 50rpx;
+  left: 145rpx;
+  width: 5rpx;
+  height: 30rpx;
+  border-radius: 6rpx;
+  background-color: #000000;
+}
+
+.group {
+  position: absolute;
+  top: 40rpx;
+  left: 160rpx;
+  font-size: 14px;
+}
+
+.progress {
+  position: relative;
+  top: 170rpx;
+  left: 50%;
+  width: 670rpx;
+  height: 242rpx;
+  border-radius: 28rpx;
+  border: 1px solid #000000;
+  transform: translateX(-50%);
+}

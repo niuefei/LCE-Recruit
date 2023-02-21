@@ -1,5 +1,5 @@
 /* 全局引入动画库animate.css */
-@import"./utils/animate.wxss"
+@import "./utils/animate.wxss";
 
 /**app.wxss**/
 .container {
