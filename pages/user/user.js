@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    default_avatar: "../../static/images/default-avatar.svg"
+    default_avatar: "../../static/images/default-avatar.svg",
   },
 
   /**
@@ -17,6 +17,25 @@ Page({
     this.storeBindings = createStoreBindings(this , {
       store,
       fields: ['userInfo','signupData'],
+    })
+
+    // 获得报名信息
+    let that = this;
+    wx.request({
+      url: 'http://127.0.0.1:4523/m1/2179045-0-default/recruit/registerInfo/list',
+      data: {
+        stuNum: 1
+      },
+      method: "GET",
+      success(res) {
+        console.log("获取成功");
+        that.setData({
+          signupData: res.data
+        })
+      },
+      fail(err) {
+        console.log("失败"+err.Msg);
+      }
     })
     
   },

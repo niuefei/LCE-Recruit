@@ -3,8 +3,12 @@
 <view class="info-wrapper">
   <left-info />
   <image class="avatar" src="{{userInfo.avatarUrl?userInfo.avatarUrl:default_avatar}}" mode="" />
-  
+
 </view>
 <view class="progress">
-    
+  <view class="progress-title">
+    考核进度
   </view>
+  <!-- <van-steps steps="{{ steps }}" active="1" custom-class="my-steps" desc-class="desc" active-icon="circle" /> -->
+  <my-step active="0"></my-step>
+</view>

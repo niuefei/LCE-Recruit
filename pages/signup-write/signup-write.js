@@ -63,8 +63,17 @@ Page({
   remind_name() {
     console.log("remind_name");
   },
-  print() {
-    console.dir(this.signupData);
+  get() {
+    wx.request({
+      url: 'http://127.0.0.1:4523/m1/2179045-0-default/recruit/registerInfo/list',
+      data: {
+        limit: 2,
+        curpage:1,
+      },
+      success(res) {
+        console.log(res);
+      }
+    })
   },
   submit(e) {
     let isAllCompleted = true;
@@ -85,31 +94,31 @@ Page({
     }
     // 判断是否全部填写了
     if(isAllCompleted) {
-      // console.log('调用中');
+      console.log('调用中');
       // 调用接口
-      // wx.request({
-      //   url: 'https://www.kevin.tj.cn:8082/recruit/registerInfo/add',
-      //   data: {
-      //     resgisterInfo: {
-      //       college: "计算机学院",
-      //       major: "软件工程",
-      //       stuNum: "3121005180",
-      //       owner_id: "013WRwFa1XL0PE0C73Ga1JdnQF2WRwFC",
-      //       grade: "大二",
-      //       sex: "男",
-      //       name: "牛奕飞",
-      //       id: "0",
-      //       introduction: "hello"
-      //     }
-      //   },
-      //   method: "POST",
-      //   success(res) {
-      //     console.log("成功"+res);
-      //   },
-      //   fail(err) {
-      //     console.log("失败"+err.errMsg);          
-      //   }
-      // })
+      wx.request({
+        url: 'http://127.0.0.1:4523/m1/2179045-0-default/recruit/registerInfo/add',
+        data: {
+          resgisterInfo: {
+            college: "计算机学院",
+            major: "软件工程",
+            stuNum: "3121005180",
+            owner_id: "a62efef915d448039508480f4a417b31",
+            grade: "大二",
+            sex: "男",
+            name: "牛奕飞",
+            id: "0",
+            introduction: "hello"
+          }
+        },
+        method: "POST",
+        success(res) {
+          console.log(res);
+        },
+        fail(err) {
+          console.log("失败"+err.errMsg);          
+        }
+      })
       this.getSignupData(this.data.signupData);
     }
   },
@@ -121,7 +130,7 @@ Page({
     // 获得store数据
     this.storeBindings = createStoreBindings(this , {
       store,
-      fields: ['owner_id'],
+      fields: ['user_id'],
       actions: ['getSignupData']
     })
     

@@ -13,8 +13,8 @@ Page({
   onReady() {
     this.storeBindings = createStoreBindings(this , {
       store,
-      fields: ['owner_id'],
-      actions: ['getUserInfo_mobx','getOwner_id']
+      fields: ['user_id'],
+      actions: ['getUserInfo_mobx','getUser_id']
     })
   },
   onLoad() {
@@ -22,20 +22,31 @@ Page({
     wx.login({
       success (res) {
         if (res.code) {
-          //发起网络请求
-          console.log('code='+res.code)
-          // 将code保存到data中
-          that.setData({
-            owner_id: res.code
-          })
-          // 保存在store中
-          that.getOwner_id(res.code);
+          //发起网络请求，向腾讯获取code
+          //用于后端向腾讯服务器获取信息
+          //一次性信息不用保存
+          console.log('腾讯的code='+res.code)
+
+          //向lce服务器发送请求，获取token user_id等信息
           wx.request({
-            url: 'http://www.kevin.tj.cn:8082/recruit/login/wechatLogin?code='+res.code,
+            url: 'https://www.kevin.tj.cn:8082/recruit/login/wechatLogin?code='+res.code,
             data: {
               code: res.code
-            }
+            },
+success(res2){
+  //打印lce返回的信息
+  console.log(res2.data)
+  that.setData({
+    //建议改成user_id owner_id意思是报名表的主人id
+    //报名表有自己的id 属性名为id
+    //建议保存token到本地，并在每次发送请求的时候将token放在Header的Authorization中
+    user_id: res2.data.id
+
+  })
+}
+          
           })
+
         } else {
           console.log('登录失败！' + res.errMsg)
         }

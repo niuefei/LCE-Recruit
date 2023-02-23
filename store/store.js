@@ -2,7 +2,7 @@ import { observable , action } from 'mobx-miniprogram'
 
 export const store = observable({
   userInfo:{},
-  owner_id: null,
+  user_id: null,
   signupData: {},
   getUserInfo_mobx: action(function(object) {
     this.userInfo = object;
@@ -10,9 +10,9 @@ export const store = observable({
   getClientHeight: action(function(height) {
     this.clientHeight = height;
   }),
-  getOwner_id: action(function(id) {
-    this.owner_id = id;
-    console.log('触发'+this.owner_id);
+  getUser_id: action(function(id) {
+    this.user_id = id;
+    console.log('触发'+this.user_id);
   }),
   getSignupData: action(function(obj) {
     this.signupData = obj;

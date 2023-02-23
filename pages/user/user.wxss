@@ -69,3 +69,10 @@
   border: 1px solid #000000;
   transform: translateX(-50%);
 }
+.progress-title {
+  position: absolute;
+  top: 16rpx;
+  left: 24rpx;
+  font-size: 12px;
+  font-weight: 400;
+}

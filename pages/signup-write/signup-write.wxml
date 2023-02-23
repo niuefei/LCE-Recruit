@@ -38,6 +38,5 @@
     </view>
     <button form-type="submit">提交</button>
   </form>
-  <button bindtap="print">打印信息</button>
-  
+  <button bindtap="get">查询</button>
 </view>
