@@ -13,7 +13,6 @@ Page({
   onReady() {
     this.storeBindings = createStoreBindings(this , {
       store,
-      fields: ['user_id'],
       actions: ['getUserInfo_mobx','getUser_id']
     })
   },
@@ -36,12 +35,13 @@ Page({
 success(res2){
   //打印lce返回的信息
   console.log(res2.data)
+  // 将user_id存放在store
+  that.getUser_id(res2.data.id)
   that.setData({
     //建议改成user_id owner_id意思是报名表的主人id
     //报名表有自己的id 属性名为id
     //建议保存token到本地，并在每次发送请求的时候将token放在Header的Authorization中
     user_id: res2.data.id
-
   })
 }
           

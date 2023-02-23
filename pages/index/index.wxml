@@ -1,18 +1,15 @@
-<!-- <view class="open-screen-wrapper">
-  <image src="https://gitee.com/Niu_efei/picturep/raw/master/202302202046228.png" mode=""/>
-</view> -->
 <swiper class="swiper" style="height: {{clientHeight+'px'}}" vertical="true" 	duration="200">
-  <swiper-item style="background-color: rgb(5, 98, 207);">
-    <image class="first-bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302192120311.png" mode="scaleToFill"/>
+  <swiper-item>
+    <image class="animate__animated animate__pulse animate__infinite	infinite first-bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302232247109.png"/>
     <button bindtap="getUserProfile">登录</button>
   </swiper-item>
   <swiper-item>
-    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302192121915.png" mode="scaleToFill"/>
+    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302232213967.png" />
   </swiper-item>
   <swiper-item>
-    <image class="animate__animated animate__pause animate__repeat-infinte img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302202050980.png" mode="scaleToFill"/>
+    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302232214564.png" />
   </swiper-item>
   <swiper-item>
-    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302192122460.png" mode="scaleToFill"/>
+    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302232214884.png"/>
   </swiper-item>
 </swiper>

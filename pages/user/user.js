@@ -9,6 +9,11 @@ Page({
   data: {
     default_avatar: "../../static/images/default-avatar.svg",
   },
+  get() {
+    wx.request({
+      url: 'http://127.0.0.1:4523/m2/2179045-0-default/58387076',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
