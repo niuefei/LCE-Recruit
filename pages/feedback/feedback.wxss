@@ -1,19 +1,23 @@
+page {
+  overflow: hidden;
+}
 .bg-img {
   position: absolute;
   width: 750rpx;
-  height: 280rpx;
+  height: 332rpx;
 }
 
 .feedback-wrapper {
   position: relative;
   left: 50%;
-  top: 135rpx;
-  width: 311px;
-  height: 451px;
+  top: 160rpx;
+  width: 622rpx;
+  /* height: 902rpx; */
   background: #0562CF;
   border: 1px solid #000000;
   transform: translateX(-50%);
 }
+
 .feedback-title {
   position: absolute;
   top: 32rpx;
@@ -22,14 +26,29 @@
   font-weight: 400;
   font-size: 17px;
   color: white;
-  
+
 }
+
 .feedback-main {
   position: relative;
   top: 114rpx;
   left: 50%;
   width: 542rpx;
-  height: 636rpx;
+  height: calc(100% - 266rpx);
   background: #FFFFFF;
+  transform: translateX(-50%);
+}
+
+.submit {
+  position: absolute;
+  bottom: 72rpx;
+  left: 50%;
+  width: 175rpx;
+  height: 58rpx;
+  background: #FFFFFF;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #333333;
+  line-height: 58rpx;
   transform: translateX(-50%);
 }

@@ -34,11 +34,13 @@ Page({
     wx.request({
       url: 'http://127.0.0.1:4523/m1/2179045-0-default/recruit/registerInfo/list',
       data: {
-        stuNum: 1
+        stuNum: 3121005180
       },
       method: "GET",
       success(res) {
         console.log("获取成功");
+        console.log(res);
+        console.log(res.data.stuNum);
         that.setData({
           signupData: res.data
         })
