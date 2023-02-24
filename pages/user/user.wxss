@@ -1,22 +1,23 @@
 .bg-img {
   position: absolute;
   width: 750rpx;
-  height: 280rpx;
+  height: 332rpx;
 }
 
 .bg-square {
   position: absolute;
-  top: 155rpx;
+  top: 175rpx;
   right: 40rpx;
   width: 670rpx;
   height: 320rpx;
   background: #75D1CE;
+  border: 1px solid black;
   transform: translateX(16rpx);
 }
 
 .info-wrapper {
   position: relative;
-  top: 135rpx;
+  top: 155rpx;
   left: 40rpx;
   width: 670rpx;
   height: 320rpx;
@@ -61,7 +62,7 @@
 
 .progress {
   position: relative;
-  top: 170rpx;
+  top: 200rpx;
   left: 50%;
   width: 670rpx;
   height: 242rpx;
