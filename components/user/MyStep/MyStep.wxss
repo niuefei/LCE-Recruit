@@ -61,7 +61,7 @@
 }
 .step-title-wrapper>view {
   position: relative;
-  width: 112rpx;
+  width: 120rpx;
   height: 40rpx;
   transition: all 1s;
   /* border: 1px solid red; */

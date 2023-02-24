@@ -69,10 +69,26 @@
   border: 1px solid #000000;
   transform: translateX(-50%);
 }
+
 .progress-title {
   position: absolute;
   top: 16rpx;
   left: 24rpx;
   font-size: 12px;
   font-weight: 400;
+}
+
+.feedback {
+  position: absolute;
+  top: 16rpx;
+  right: 10rpx;
+  width: 128rpx;
+  height: 42rpx;
+  background: #0562CF;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 42rpx;
 }

@@ -1,0 +1,35 @@
+.bg-img {
+  position: absolute;
+  width: 750rpx;
+  height: 280rpx;
+}
+
+.feedback-wrapper {
+  position: relative;
+  left: 50%;
+  top: 135rpx;
+  width: 311px;
+  height: 451px;
+  background: #0562CF;
+  border: 1px solid #000000;
+  transform: translateX(-50%);
+}
+.feedback-title {
+  position: absolute;
+  top: 32rpx;
+  left: 40rpx;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  font-size: 17px;
+  color: white;
+  
+}
+.feedback-main {
+  position: relative;
+  top: 114rpx;
+  left: 50%;
+  width: 542rpx;
+  height: 636rpx;
+  background: #FFFFFF;
+  transform: translateX(-50%);
+}

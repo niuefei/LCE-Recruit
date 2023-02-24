@@ -12,7 +12,7 @@ export const store = observable({
   }),
   getUser_id: action(function(id) {
     this.user_id = id;
-    console.log('触发'+this.user_id);
+    console.log('store触发'+this.user_id);
   }),
   getSignupData: action(function(obj) {
     this.signupData = obj;

@@ -5,11 +5,11 @@
         </view>
         <view class="step-progress" >
         </view>
-      <view  wx:for="{{steps}}" class="{{index==active?'active-spot':'spot'}}" ></view>
+      <view  wx:for="{{steps}}" wx:key="*this" class="{{index==active?'active-spot':'spot'}}" ></view>
       
     </view>
     <view class="step-title-wrapper">
-      <view wx:for="{{steps}}" class="{{index==active?'active-step-title':''}}">
+      <view wx:for="{{steps}}" wx:key="*this" class="{{index==active?'active-step-title':''}}">
         <view>
         {{item}}
         </view>

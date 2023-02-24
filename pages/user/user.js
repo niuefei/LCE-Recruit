@@ -14,6 +14,11 @@ Page({
       url: 'http://127.0.0.1:4523/m2/2179045-0-default/58387076',
     })
   },
+  goFeedBack() {
+    wx.navigateTo({
+      url: '../feedback/feedback',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -21,7 +26,7 @@ Page({
   onLoad() {
     this.storeBindings = createStoreBindings(this , {
       store,
-      fields: ['userInfo','signupData'],
+      fields: ['userInfo','signupData','user_id'],
     })
 
     // 获得报名信息

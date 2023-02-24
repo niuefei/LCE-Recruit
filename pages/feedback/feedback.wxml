@@ -1,0 +1,9 @@
+<image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302192324322.png" mode="" />
+<view class="feedback-wrapper">
+  <view class="feedback-title">
+    在这里写下你的反馈
+  </view>
+  <view class="feedback-main">
+
+  </view>
+</view>
