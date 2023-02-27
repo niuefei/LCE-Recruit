@@ -60,9 +60,6 @@ Page({
         break;
     }
   },
-  remind_name() {
-    console.log("remind_name");
-  },
   get() {
     wx.request({
       url: 'http://127.0.0.1:4523/m1/2179045-0-default/recruit/registerInfo/list',

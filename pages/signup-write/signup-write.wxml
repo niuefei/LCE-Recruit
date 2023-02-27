@@ -2,7 +2,25 @@
 
 <view class="wrapper" style="height: {{clientHeight+'px'}};">
   <form bindsubmit="submit">
-    <view class="ipt-field">
+    <view class="ipt-wrapper">
+      <view class="ipt-star">
+        *
+      </view>
+      <label for="name" class="ipt-title">
+        姓名
+      </label>
+      <input type="text" class="ipt" id="name" bindchange="iptChange" data-type="name" name="nameIpt" />
+    </view>
+    <view class="ipt-wrapper">
+      <view class="ipt-star">
+        *
+      </view>
+      <label for="studentNumber" class="ipt-title">
+        学号
+      </label>
+      <input type="text" class="ipt" id="studentNumber" bindchange="iptChange" data-type="studentNumber" name="studentNumberIpt" />
+    </view>
+    <!-- <view class="ipt-field">
       <view>
         <label for="name">姓名</label>
         <input name="nameIpt" type="text" id="name" class="ipt" bindchange="iptChange" data-type="name" placeholder="请输入姓名" maxlength="10" />
@@ -35,8 +53,9 @@
         <label>简介</label>
         <textarea name="introductionIpt" class="introduction" placeholder="目前的学习进度，对工作室的期望" bindblur="iptChange" data-type="introduction"></textarea>
       </view>
-    </view>
-    <button form-type="submit">提交</button>
+    </view> -->
+
+    <!-- <button form-type="submit">提交</button> -->
   </form>
-  <button bindtap="get">查询</button>
+  <!-- <button bindtap="get">查询</button> -->
 </view>
