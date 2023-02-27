@@ -21,6 +21,7 @@ Page({
     })
   },
   onLoad() {
+    
     var that = this;
     wx.login({
       success(res) {
@@ -40,7 +41,7 @@ Page({
               //打印lce返回的信息
               console.log(res2.data)
               // 将user_id存放在store
-              that.getUser_id(res2.data.id)
+              // that.getUser_id(res2.data.id)
               that.setData({
                 //建议改成user_id owner_id意思是报名表的主人id
                 //报名表有自己的id 属性名为id
@@ -60,7 +61,9 @@ Page({
       this.setData({
         canIUseGetUserProfile: true
       })
+      
     }
+    
     /*
       获得手机信息    
     */
@@ -73,10 +76,15 @@ Page({
     })
   }, // onload
 
-  a() {
-    console.log('触发a');
-    this.getUserInfo_mobx(this.data.userInfo);
+  // onReady() {
+  //   console.log("onReady");
+  //   this.getUserProfile();
+  // },
+  bind(e) {
+    console.log(e);
+    
   },
+
   getUserProfile(e) {
     // 推荐使用 wx.getUserProfile 获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
     // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
@@ -87,20 +95,30 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
-        this.a();
+        console.log("getUserProfile");
+        this.getUserInfo_mobx(this.data.userInfo);
       }
     })
 
 
+  }, 
+  get() {
+    wx.request({
+      url: 'https://175.178.179.160:8082/recruit/status/query',
+      data: this.user_id,
+      success: (res) => {console.log("成功");console.dir(res);;},
+      fail: (err) => {console.log("失败  "+err);},
+      complete: (res) => {},
+    })
   },
   getUserInfo(e) {
     // 不推荐使用 getUserInfo 获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
+    console.log("触发了getUserInfo");
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+    // console.log(e);
+    
   },
-  getCode(e) {
-
-  }
 })

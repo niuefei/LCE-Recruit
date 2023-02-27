@@ -8,6 +8,7 @@ Page({
    */
   data: {
     default_avatar: "../../static/images/default-avatar.svg",
+    avatarUrl: null
   },
   get() {
     wx.request({
@@ -50,6 +51,12 @@ Page({
       }
     })
     
+  },
+  changeAvatar(e) {
+   console.log(e);
+   this.setData({
+    avatarUrl: e.detail.avatarUrl
+   })
   },
 
   /**

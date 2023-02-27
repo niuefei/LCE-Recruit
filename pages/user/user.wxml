@@ -2,7 +2,9 @@
 <view class="bg-square"></view>
 <view class="info-wrapper">
   <left-info />
-  <image class="avatar" src="{{userInfo.avatarUrl?userInfo.avatarUrl:default_avatar}}" mode="" />
+    <button class="change-avatar" open-type="chooseAvatar" bindchooseavatar="changeAvatar">
+      <image class="avatar" src="{{avatarUrl?avatarUrl:default_avatar}}" mode="" bindtap="changeAvatar" />
+    </button>
 
 </view>
 <view class="progress">
@@ -13,4 +15,7 @@
     问题反馈
   </view>
   <my-step active="0"></my-step>
+  <view>
+    {{userInfo.avatarUrl}}
+  </view>
 </view>

@@ -24,14 +24,24 @@
   border: 1px solid black;
   background-color: white;
 }
-
-.avatar {
+.change-avatar {
   position: absolute;
   top: 40rpx;
   right: 80rpx;
+  padding: 0;
   width: 160rpx;
   height: 160rpx;
-  border: 1px solid #666666;
+  /* border: 1px solid #666666; */
+  border-radius: 50%;
+}
+
+.avatar {
+  /* position: absolute;
+  top: 40rpx;
+  right: 80rpx; */
+  width: 160rpx;
+  height: 160rpx;
+  /* border: 1px solid #666666; */
   border-radius: 50%;
 }
 
