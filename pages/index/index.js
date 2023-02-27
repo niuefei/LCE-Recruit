@@ -21,7 +21,6 @@ Page({
     })
   },
   onLoad() {
-    
     var that = this;
     wx.login({
       success(res) {
@@ -41,7 +40,6 @@ Page({
               //打印lce返回的信息
               console.log(res2.data)
               // 将user_id存放在store
-              // that.getUser_id(res2.data.id)
               that.setData({
                 //建议改成user_id owner_id意思是报名表的主人id
                 //报名表有自己的id 属性名为id
