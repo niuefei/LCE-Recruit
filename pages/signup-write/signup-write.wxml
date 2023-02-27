@@ -1,7 +1,7 @@
 <image src="https://gitee.com/Niu_efei/picturep/raw/master/202302192223884.png" mode="scaleToFill" class="bg-img" style="height: {{clientHeight+'px'}};" />
 
 <view class="wrapper" style="height: {{clientHeight+'px'}};">
-  <form bindsubmit="submit">
+  <form bindsubmit="submit" class="form">
     <view class="ipt-wrapper">
       <view class="ipt-star">
         *
@@ -20,42 +20,33 @@
       </label>
       <input type="text" class="ipt" id="studentNumber" bindchange="iptChange" data-type="studentNumber" name="studentNumberIpt" />
     </view>
-    <!-- <view class="ipt-field">
-      <view>
-        <label for="name">姓名</label>
-        <input name="nameIpt" type="text" id="name" class="ipt" bindchange="iptChange" data-type="name" placeholder="请输入姓名" maxlength="10" />
-        <view class="remind">
-          name
-        </view>
+    <view class="ipt-wrapper">
+      <view class="ipt-star">
+        *
       </view>
-      <view>
-        <label for="studentNumber">学号</label>
-        <input name="studentNumberIpt" type="text" id="studentNumber" class="ipt" bindchange="iptChange" data-type="studentNumber" placeholder="请输入学号" maxlength="11" />
-        <view class="remind">
-          studentNumber
-        </view>
+      <label for="college" class="ipt-title">
+        学院
+      </label>
+      <input type="text" class="ipt" id="college" bindchange="iptChange" data-type="college" name="collegeIpt"/>
+    </view>
+    <view class="ipt-wrapper">
+      <view class="ipt-star">
+        *
       </view>
-      <view>
-        <label for="college">学院</label>
-        <input name="collegeIpt" type="text" id="college" class="ipt" bindchange="iptChange" data-type="college" placeholder="请输入学院" maxlength="10" />
+      <label for="major" class="ipt-title">
+        专业
+      </label>
+      <input type="text" class="ipt" id="major" bindchange="iptChange" data-type="major" name="majorIpt"/>
+    </view>
+    <view class="introduction-wrapper">
+      <view class="introduction-star">
+        *
       </view>
-
-      <view>
-        <label for="major">专业</label>
-        <input name="majorIpt" type="text" id="major" class="ipt" bindchange="iptChange" data-type="major" placeholder="请输入专业" maxlength="10" />
+      <view class="introduction-title">
+        简介
       </view>
-
-      <view>
-        <label for="phoneNumber">电话</label>
-        <input name="phoneNumberIpt" type="text" id="phoneNumber" class="ipt" bindchange="iptChange" data-type="phoneNumber" placeholder="请输入电话" maxlength="30" />
-      </view>
-      <view class="introduction-field">
-        <label>简介</label>
-        <textarea name="introductionIpt" class="introduction" placeholder="目前的学习进度，对工作室的期望" bindblur="iptChange" data-type="introduction"></textarea>
-      </view>
-    </view> -->
-
-    <!-- <button form-type="submit">提交</button> -->
+      <textarea name="introductionIpt" class="introduction" placeholder="目前的学习进度，对工作室的期望" bindblur="iptChange" data-type="introduction"></textarea>
+    </view>
+    <button form-type="submit" class="submit-btn">我填好了</button>
   </form>
-  <!-- <button bindtap="get">查询</button> -->
 </view>

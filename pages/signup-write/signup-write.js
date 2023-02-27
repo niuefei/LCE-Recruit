@@ -14,7 +14,6 @@ Page({
       studentNumber: null, // 学号
       college: null, // 学院
       major: null, // 专业
-      phoneNumber: null, // 电话
       introduction: null // 简介
     },
     
@@ -44,11 +43,6 @@ Page({
       case "major":
           this.setData({
             signupData : {...this.data.signupData,major:value}
-        })
-          break;
-      case "phoneNumber":
-          this.setData({
-            signupData : {...this.data.signupData,phoneNumber:value}
         })
           break;
       case "introduction":
