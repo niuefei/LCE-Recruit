@@ -1,4 +1,8 @@
 // pages/signup-write/signup-write.js
+
+// 引入store
+import { createStoreBindings } from 'mobx-miniprogram-bindings'
+import { store } from '../../store/store'
 Page({
 
   /**
@@ -10,7 +14,6 @@ Page({
       studentNumber: null, // 学号
       college: null, // 学院
       major: null, // 专业
-      phoneNumber: null, // 电话
       introduction: null // 简介
     },
     
@@ -24,36 +27,90 @@ Page({
     switch (type) {
       case "name":
         this.setData({
-          name: value
+          signupData : {...this.data.signupData,name:value}
         })
         break;
       case "studentNumber":
         this.setData({
-          studentNumber: value
+          signupData : {...this.data.signupData,studentNumber:value}
         })
         break;
       case "college":
           this.setData({
-            college: value
+            signupData : {...this.data.signupData,college:value}
         })
           break;
       case "major":
           this.setData({
-            major: value
-        })
-          break;
-      case "phoneNumber":
-          this.setData({
-            phoneNumber: value
+            signupData : {...this.data.signupData,major:value}
         })
           break;
       case "introduction":
           this.setData({
-            introduction: value
+            signupData : {...this.data.signupData,introduction:value}
         })
           break;
       default:
         break;
+    }
+  },
+  get() {
+    wx.request({
+      url: 'http://127.0.0.1:4523/m1/2179045-0-default/recruit/registerInfo/list',
+      data: {
+        limit: 2,
+        curpage:1,
+      },
+      success(res) {
+        console.log(res);
+      }
+    })
+  },
+  submit(e) {
+    let isAllCompleted = true;
+    let valueObj = e.detail.value;
+    
+    for(const key in valueObj) {
+      if(!valueObj[key]) {
+        isAllCompleted = false;
+        wx.showToast({
+          title: '有信息未填写',
+          duration: 1500,
+          icon:'error',
+          mask: true,
+        })
+        break;
+      }
+      
+    }
+    // 判断是否全部填写了
+    if(isAllCompleted) {
+      console.log('调用中');
+      // 调用接口
+      wx.request({
+        url: 'http://127.0.0.1:4523/m1/2179045-0-default/recruit/registerInfo/add',
+        data: {
+          resgisterInfo: {
+            college: "计算机学院",
+            major: "软件工程",
+            stuNum: "3121005180",
+            owner_id: "a62efef915d448039508480f4a417b31",
+            grade: "大二",
+            sex: "男",
+            name: "牛奕飞",
+            id: "0",
+            introduction: "hello"
+          }
+        },
+        method: "POST",
+        success(res) {
+          console.log(res);
+        },
+        fail(err) {
+          console.log("失败"+err.errMsg);          
+        }
+      })
+      this.getSignupData(this.data.signupData);
     }
   },
 
@@ -61,6 +118,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    // 获得store数据
+    this.storeBindings = createStoreBindings(this , {
+      store,
+      fields: ['user_id'],
+      actions: ['getSignupData']
+    })
+    
+
     // 获得手机长度
     wx.getSystemInfo({
       success: (res) => {
@@ -69,6 +134,8 @@ Page({
         })
       }
     })
+
+
   },
 
   /**

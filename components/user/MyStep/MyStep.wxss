@@ -1,0 +1,120 @@
+.wrapper {
+  position: relative;
+  left: 24rpx;
+  top: 70rpx;
+  width: 606rpx;
+  /* border: 1px solid red; */
+}
+.step-wrapper {
+  position: relative;
+  top: 40rpx;
+  width: 100%;
+  height: 30rpx;
+  background: #EEEEEE;
+  border-radius: 15px;
+  box-shadow: inset 0px 4px 10px 0px rgba(0,0,0,0.1), inset 0px -4px 10px 0px rgba(0,0,0,0.01);
+}
+.step-main {
+  position: relative;
+  left: 50%;
+  top: 7rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  width: 545rpx;
+  height: 16rpx;
+  /* border: 1px solid red; */
+  border-radius: 15px;
+  transform: translateX(-50%);
+}
+.step-progress {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  border-radius: 15px;
+  background-color: #3645CE;
+  transition: all 1s;
+}
+.spot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+.active-spot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: #FF8484;
+  z-index: 2;
+}
+.step-title-wrapper {
+  position: relative;
+  top: -70rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 135rpx;
+  font-size: 12px;
+}
+.step-title-wrapper>view {
+  position: relative;
+  width: 120rpx;
+  height: 40rpx;
+  transition: all 1s;
+  text-align: center;
+  line-height: 40rpx;
+}
+.step-title-wrapper>view:first-child {
+  transform: translate(-20rpx,95rpx);
+}
+.step-title-wrapper>view:nth-child(2) {
+  transform: translateX(-7rpx);
+}
+.step-title-wrapper>view:nth-child(3) {
+  transform: translateX(7rpx);
+}
+
+.step-title-wrapper>view:last-child
+ {
+  transform: translate(18rpx,95rpx);
+}
+/* 1为位于下方的标题 */
+.active-step-title {
+  width: 112rpx;
+  height: 40rpx;
+  background-color: #3645CE;
+  border-radius: 5rpx;
+  color: #FFFFFF;
+}
+.triangle1 {
+  display: none;
+  position: relative;
+  top: -59rpx;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid #3645CE;
+  border-right: 5px solid transparent;
+  transform: translateX(-50%);
+}
+.triangle2 {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #3645CE;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transform: translateX(-50%);
+}
+.active-triangle {
+  display: block;
+} 

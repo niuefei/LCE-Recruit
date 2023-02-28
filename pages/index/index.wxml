@@ -1,17 +1,16 @@
 <swiper class="swiper" style="height: {{clientHeight+'px'}}" vertical="true" 	duration="200">
   <swiper-item>
-    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302081947452.png" mode="scaleToFill"/>
+    <image class="animate__animated animate__pulse animate__infinite	infinite first-bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302232247109.png"/>
+    <button open-type="getUserInfo" bindgetuserinfo="bind">登录</button>
+    <button bindtap="get">查询</button>
   </swiper-item>
   <swiper-item>
-    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302081953398.png" mode="scaleToFill"/>
+    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302232213967.png" />
   </swiper-item>
   <swiper-item>
-    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302081947181.png" mode="scaleToFill"/>
+    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302232214564.png" />
   </swiper-item>
   <swiper-item>
-    
-  </swiper-item>
-  <swiper-item>
-    
+    <image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302232214884.png"/>
   </swiper-item>
 </swiper>

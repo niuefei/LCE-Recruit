@@ -7,6 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    default_avatar: "../../static/images/default-avatar.svg",
+    avatarUrl: null
+  },
+  goFeedBack() {
+    wx.navigateTo({
+      url: '../feedback/feedback',
+    })
   },
 
   /**
@@ -15,9 +22,36 @@ Page({
   onLoad() {
     this.storeBindings = createStoreBindings(this , {
       store,
-      fields: ['userInfo'],
+      fields: ['userInfo','signupData','user_id'],
     })
     
+    // 获得报名信息
+    let that = this;
+    wx.request({
+      url: 'http://127.0.0.1:4523/m1/2179045-0-default/recruit/registerInfo/list',
+      data: {
+        stuNum: 3121005180
+      },
+      method: "GET",
+      success(res) {
+        console.log("获取成功");
+        console.log(res);
+        console.log(res.data.stuNum);
+        that.setData({
+          signupData: res.data
+        })
+      },
+      fail(err) {
+        console.log("失败"+err.Msg);
+      }
+    })
+    
+  },
+  changeAvatar(e) {
+   console.log(e);
+   this.setData({
+    avatarUrl: e.detail.avatarUrl
+   })
   },
 
   /**

@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "left-info": "../../components/user/LeftInfo/LeftInfo",
+    "my-step": "../../components/user/MyStep/MyStep"
+  },
   "navigationBarTitleText": "我的"
 }

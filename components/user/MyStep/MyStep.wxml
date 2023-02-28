@@ -1,0 +1,22 @@
+<view class="wrapper">
+  <view class="step-wrapper">
+    <view class="step-main">
+      <view class="step-progress" style="width: {{progressWidth[active]+'rpx'}};">
+        </view>
+        <view class="step-progress" >
+        </view>
+      <view  wx:for="{{steps}}" wx:key="*this" class="{{index==active?'active-spot':'spot'}}" ></view>
+      
+    </view>
+    <view class="step-title-wrapper">
+      <view wx:for="{{steps}}" wx:key="*this" class="{{index==active?'active-step-title':''}}">
+        <view>
+        {{item}}
+        </view>
+        <view class="{{index==0||index==steps.length-1?'triangle1':'triangle2'}} {{index==active?'active-triangle':''}}">
+          
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

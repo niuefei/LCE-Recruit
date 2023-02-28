@@ -2,12 +2,20 @@ import { observable , action } from 'mobx-miniprogram'
 
 export const store = observable({
   userInfo:{},
-  clientHeight:666,
+  user_id: null,
+  signupData: {},
   getUserInfo_mobx: action(function(object) {
     this.userInfo = object;
-    console.log(this.userInfo);
   }),
   getClientHeight: action(function(height) {
     this.clientHeight = height;
+  }),
+  getUser_id: action(function(id) {
+    this.user_id = id;
+    console.log('store触发'+this.user_id);
+  }),
+  getSignupData: action(function(obj) {
+    this.signupData = obj;
+    
   })
 })

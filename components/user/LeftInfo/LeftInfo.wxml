@@ -1,0 +1,25 @@
+<view class="wrapper">
+  <view class="first-line">
+    <view class="name">
+      {{userInfo.name?userInfo.name:"游客"}}
+    </view>
+    <view class="center-line"></view>
+    <view class="group">
+      前端
+    </view>
+  </view>
+  <view class="info-list">
+    <view class="college">
+      计算机学院
+    </view>
+    <view class="major">
+      软件工程
+    </view>
+    <view class="studentNumber">
+      3121005180
+    </view>
+    <view class="phoneNumber">
+      13783193824
+    </view>
+  </view>
+</view>

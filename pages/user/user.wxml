@@ -1,6 +1,21 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<image class="bg-img" src="https://gitee.com/Niu_efei/picturep/raw/master/202302192324322.png" mode="" />
+<view class="bg-square"></view>
+<view class="info-wrapper">
+  <left-info />
+    <button class="change-avatar" open-type="chooseAvatar" bindchooseavatar="changeAvatar">
+      <image class="avatar" src="{{avatarUrl?avatarUrl:default_avatar}}" mode="" bindtap="changeAvatar" />
+    </button>
 
-<view class="animate__animated animate__bounce">
-  测试动画效果
+</view>
+<view class="progress">
+  <view class="progress-title">
+    考核进度
+  </view>
+  <view class="feedback" bindtap="goFeedBack">
+    问题反馈
+  </view>
+  <my-step active="0"></my-step>
+  <view>
+    {{userInfo.avatarUrl}}
+  </view>
 </view>

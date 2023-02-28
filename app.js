@@ -14,6 +14,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    baseURL: "http://127.0.0.1:4523"
   }
 })
