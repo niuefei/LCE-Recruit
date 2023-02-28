@@ -31,6 +31,7 @@
   padding: 0;
   width: 160rpx;
   height: 160rpx;
+  border: 0;
   /* border: 1px solid #666666; */
   border-radius: 50%;
 }
